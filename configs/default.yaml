@@ -1,0 +1,22 @@
+data_root: "./VOCtrainval_06-Nov-2007"
+year: "2007"
+image_size: 256
+batch_size: 4
+num_workers: 2
+lr: 0.00005
+weight_decay: 0.0001
+num_epochs: 20
+num_classes: 21
+ignore_index: 255
+seed: 42
+save_root: "./outputs"
+vis_num_samples: 6
+
+model: "unet"          # unet or deeplab
+loss: "combined"       # ce, dice, combined
+augmentation: true
+pretrained: true       # mainly used for deeplab
+exp_name: ""
+
+scheduler_patience: 3
+scheduler_factor: 0.5
